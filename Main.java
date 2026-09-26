@@ -45,17 +45,29 @@ public class Main {
                 }
                 else{
                     System.out.println("Enter the correct choice");
-                }
-                
+                }  
             }    
             else if (choice == 2) {
-                
+                System.out.print("Enter your account number: ");
+                long accNumber = sc.nextLong();
+                System.out.print("Enter ammount that you want to deposite: ");
+                double ammount = sc.nextDouble();
+
+                bank.deposit(accNumber, ammount);
             }
             else if (choice == 3) {
-                
+                System.out.print("Enter your account number: ");
+                long accNumber = sc.nextLong();
+                System.out.print("Enter ammount that you want to widhraw: ");
+                double ammount = sc.nextDouble();
+
+                bank.withdraw(accNumber, ammount);
             }
             else if (choice == 4) {
-                
+                System.out.print("Enter your account number: ");
+                long accNumber = sc.nextLong();
+
+                bank.getMybelence(accNumber)
             }
             else if (choice == 5) {
                 

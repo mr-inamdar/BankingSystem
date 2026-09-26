@@ -101,9 +101,7 @@ public class Bank {
         account.addTransaction(transaction);
     }
 
-    public void transfer(long fromAccountNumber,
-                         long toAccountNumber,
-                         double amount) {
+    public void transfer(long fromAccountNumber, long toAccountNumber, double amount) {
 
         Account sender = findAccount(fromAccountNumber);
         Account receiver = findAccount(toAccountNumber);
@@ -153,5 +151,16 @@ public class Bank {
 
 
         System.out.println("Transfer successful!");
+    }
+
+    public double getMybelence(long accountNumber){
+        Account account = findAccount(accountNumber);
+
+        if (account == null) {
+            System.out.println("Account not found");
+            return 0.0;
+        }
+
+        return account.checkBalence();
     }
 }
