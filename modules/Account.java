@@ -8,11 +8,13 @@ public abstract class Account {
     public  String name;
     protected double balence;
     private List<Transaction> transactions = new ArrayList<>();
+    public  Costamer c;
 
-    public Account(long accNumber, String name, double balence){
+    public Account(long accNumber, String name, double balence, long phone, String email, String address){
         this.accNumber = accNumber;
         this.name = name;
         this.balence = balence;
+        c = new Costamer(phone, email, address);
     }
 
     public abstract void calculateIntrest();

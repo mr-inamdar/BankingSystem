@@ -27,7 +27,7 @@ public class Costamer {
         System.out.println("Now Email: " + this.email);
     }
 
-    public void updatePhone(String address){
+    public void updateAddress(String address){
         this.address = address;
         System.out.println("Now Address: " + this.address);
     }
